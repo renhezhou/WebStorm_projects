@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript在html使用</title>
+</head>
+<body>
+<input type="text" id="name">
+<input type="submit" value="登陆" name="btn" onclick="reply()">
+<input type="button" value="123" id="show">
+
+<script language="JavaScript">
+    function check() {
+        var name = document.getElementById("name");
+        if (name.value == "") {
+            alert("请输入用户名");
+            return false;
+        }
+    }
+
+    function show() {
+        var name = document.getElementById("show");
+        if (name.value == "123") {
+            name.value = "456";
+        } else {
+            name.value = "123";
+        }
+    }
+    function reply() {
+        var t = window.setInterval("show()", 3000);
+    }
+
+</script>
+</body>
+</html>
